@@ -1,0 +1,35 @@
+ALGORITHM words&vowels
+VAR
+    word,i,j,k: INTEGER;
+    pers:STRING;
+BEGIN
+    read (pers);
+    j:=0;
+    word:=0; 
+    k:=0;
+    FOR i FROM 0 TO len(pers) STEP i:=i+1  DO
+        if (pers[i]=" " ) THEN
+        j:=j+1;
+        ELSE 
+        j:=j+0;
+       SWITCH (pers[i]) DO
+           case "A" : 
+           k:=k+1;
+           BREAK;
+           case "E" : k:=k+1;
+           BREAK;
+           case "I": k:=k+1;
+           BREAK;
+           case "O": k:=k+1;
+           BREAK;
+           case "U": k:=k+1;
+           BREAK;
+           case "Y": k:=k+1;
+           BREAK
+           default : k:=k+0;
+       END_SWITCH
+    END_FOR
+    word:=j-1;
+    write("word's number",word);
+    wrtie ("vowels number",k);
+END
